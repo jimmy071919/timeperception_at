@@ -1,0 +1,149 @@
+5.7070 	WARNING 	User requested fullscreen with size [1280  720], but screen is actually [1920, 1080]. Using actual size
+6.4031 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019DBBEDBBB0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000019DBD2B3B80>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.4033 	EXP 	window1: mouseVisible = True
+6.4035 	EXP 	window1: mouseVisible = False
+6.4035 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.4035 	EXP 	window1: recordFrameIntervals = False
+6.5687 	EXP 	window1: recordFrameIntervals = True
+6.7516 	EXP 	Screen (0) actual frame rate measured at 60.12Hz
+6.7516 	EXP 	window1: recordFrameIntervals = False
+8.9785 	EXP 	Created textWelcomeMessage = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textWelcomeMessage', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='歡迎來到本次的實驗\n\n請按"空白鍵"開始實驗', units='height', win=Window(...), wrapWidth=1)
+8.9829 	EXP 	Created textblank1000 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textblank1000', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.4297 	EXP 	Sound sound_1 set volume 1.000
+9.4337 	EXP 	Created emopic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='emopic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+9.4543 	EXP 	Created redstar = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='redstar.png', interpolate=True, mask=None, maskParams=None, name='redstar', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.2, 0.2]), texRes=128.0, units='height', win=Window(...))
+9.4548 	EXP 	Created textreproductionstart = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textreproductionstart', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.4604 	EXP 	window1: mouseVisible = True
+9.5855 	EXP 	Created scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='scale', opacity=None, ori=0.0, pos=array([ 0. , -0.2]), readOnly=False, self=UNKNOWN, size=array([1.2 , 0.04]), startValue=None, style='rating', styleTweaks=['triangleMarker'], ticks=ndarray(...), units='height', win=Window(...))
+9.5995 	EXP 	Created textrest = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textrest', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='休息一分鐘\n\n時間結束會自動進入下一題', units='height', win=Window(...), wrapWidth=1)
+9.6047 	EXP 	Created textready = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textready', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='即將進入下一題', units='height', win=Window(...), wrapWidth=1)
+9.6127 	EXP 	Created textEndMessage = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textEndMessage', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='本次實驗到此結束\n\n感謝您的參與', units='height', win=Window(...), wrapWidth=1)
+9.6343 	EXP 	scale: autoLog = True
+9.6343 	EXP 	scale: markerPos = None
+9.6343 	EXP 	scale: styleTweaks = []
+9.6343 	EXP 	scale: styleTweaks = []
+9.6343 	EXP 	scale: styleTweaks = ['triangleMarker']
+9.6343 	EXP 	scale: styleTweaks = ['triangleMarker']
+9.6343 	EXP 	scale: contrast = 1.0
+9.6343 	EXP 	scale: autoLog = True
+9.6343 	EXP 	textWelcomeMessage: autoDraw = True
+10.3242 	EXP 	Imported pic_condition_2.xlsx as conditions, 4 conditions, 5 params
+10.3245 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+10.3248 	EXP 	New trial (rep=0, index=0): {'emo_pic': 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\FBgs1RAVEAAo9TV.jpg', 'duration': 3, 'posx': 0, 'starduration': 0.1552196, 'posy': 0.4}
+10.3346 	EXP 	Sound sound_1 started
+10.3344 	EXP 	textWelcomeMessage: autoDraw = False
+10.3344 	EXP 	textblank1000: autoDraw = True
+10.3570 	DATA 	KeyPress:  
+10.8788 	EXP 	Sound sound_1 reached end of file
+11.4175 	EXP 	textblank1000: autoDraw = False
+11.4175 	EXP 	textblank1000: autoDraw = False
+11.4175 	EXP 	emopic: image = 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\FBgs1RAVEAAo9TV.jpg'
+11.4175 	EXP 	emopic: autoDraw = True
+11.4844 	EXP 	redstar: autoDraw = True
+12.4842 	EXP 	redstar: autoDraw = False
+14.4508 	EXP 	emopic: autoDraw = False
+14.4508 	EXP 	emopic: autoDraw = False
+14.4508 	EXP 	redstar: autoDraw = False
+14.4508 	EXP 	textreproductionstart: height = 0.05
+14.4508 	EXP 	textreproductionstart: height = 0.05
+14.4508 	EXP 	textreproductionstart: height = 0.05
+14.4508 	EXP 	textreproductionstart: text = '時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題'
+14.4508 	EXP 	scale: markerPos = None
+14.4508 	EXP 	scale: markerPos = None
+14.4508 	EXP 	textreproductionstart: autoDraw = True
+14.4508 	EXP 	scale: autoDraw = True
+15.2245 	DATA 	KeyPress:  
+15.2345 	EXP 	textreproductionstart: autoDraw = False
+15.2345 	EXP 	scale: autoDraw = False
+15.2345 	EXP 	textrest: autoDraw = True
+16.2169 	EXP 	textready: autoDraw = True
+16.2337 	EXP 	textrest: autoDraw = False
+17.2010 	EXP 	New trial (rep=0, index=1): {'emo_pic': 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\S__42811412.jpg', 'duration': 7, 'posx': 0.4, 'starduration': 0.0561269, 'posy': 0}
+17.2168 	EXP 	Sound sound_1 started
+17.2170 	EXP 	textready: autoDraw = False
+17.2170 	EXP 	textrest: autoDraw = False
+17.2170 	EXP 	textready: autoDraw = False
+17.2170 	EXP 	textblank1000: autoDraw = True
+17.7588 	EXP 	Sound sound_1 reached end of file
+18.2666 	EXP 	textblank1000: autoDraw = False
+18.2666 	EXP 	textblank1000: autoDraw = False
+18.2666 	EXP 	emopic: image = 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\S__42811412.jpg'
+18.2666 	EXP 	emopic: autoDraw = True
+18.2833 	EXP 	redstar: autoDraw = True
+19.2831 	EXP 	redstar: autoDraw = False
+25.2823 	EXP 	emopic: autoDraw = False
+25.2823 	EXP 	emopic: autoDraw = False
+25.2823 	EXP 	redstar: autoDraw = False
+25.2823 	EXP 	textreproductionstart: text = '時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題'
+25.2823 	EXP 	scale: markerPos = None
+25.2823 	EXP 	scale: markerPos = None
+25.2823 	EXP 	textreproductionstart: autoDraw = True
+25.2823 	EXP 	scale: autoDraw = True
+25.8835 	DATA 	KeyPress:  
+25.9159 	EXP 	textreproductionstart: autoDraw = False
+25.9159 	EXP 	scale: autoDraw = False
+25.9159 	EXP 	textrest: autoDraw = True
+26.9154 	EXP 	textrest: autoDraw = False
+26.9154 	EXP 	textready: autoDraw = True
+27.8993 	EXP 	New trial (rep=0, index=2): {'emo_pic': 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\rdt-20210516-0143118280534424875981353.jpg', 'duration': 5, 'posx': -0.4, 'starduration': 0.1152479, 'posy': 0}
+27.9153 	EXP 	Sound sound_1 started
+27.9152 	EXP 	textready: autoDraw = False
+27.9152 	EXP 	textrest: autoDraw = False
+27.9152 	EXP 	textready: autoDraw = False
+27.9152 	EXP 	textblank1000: autoDraw = True
+28.4588 	EXP 	Sound sound_1 reached end of file
+28.9651 	EXP 	textblank1000: autoDraw = False
+28.9651 	EXP 	textblank1000: autoDraw = False
+28.9651 	EXP 	emopic: image = 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\rdt-20210516-0143118280534424875981353.jpg'
+28.9651 	EXP 	emopic: autoDraw = True
+29.0320 	EXP 	redstar: autoDraw = True
+30.0316 	EXP 	redstar: autoDraw = False
+33.9813 	EXP 	emopic: autoDraw = False
+33.9813 	EXP 	emopic: autoDraw = False
+33.9813 	EXP 	redstar: autoDraw = False
+33.9813 	EXP 	textreproductionstart: text = '時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題'
+33.9813 	EXP 	scale: markerPos = None
+33.9813 	EXP 	scale: markerPos = None
+33.9813 	EXP 	textreproductionstart: autoDraw = True
+33.9813 	EXP 	scale: autoDraw = True
+34.7861 	DATA 	KeyPress:  
+34.7983 	EXP 	textreproductionstart: autoDraw = False
+34.7983 	EXP 	scale: autoDraw = False
+34.7983 	EXP 	textrest: autoDraw = True
+35.7810 	EXP 	textready: autoDraw = True
+35.7977 	EXP 	textrest: autoDraw = False
+36.7648 	EXP 	New trial (rep=0, index=3): {'emo_pic': 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\EBPgLdJe_400x400.png', 'duration': 1, 'posx': 0, 'starduration': 0.1384903, 'posy': -0.4}
+36.7809 	EXP 	Sound sound_1 started
+36.7810 	EXP 	textready: autoDraw = False
+36.7810 	EXP 	textrest: autoDraw = False
+36.7810 	EXP 	textready: autoDraw = False
+36.7810 	EXP 	textblank1000: autoDraw = True
+37.3202 	EXP 	Sound sound_1 reached end of file
+37.8140 	EXP 	textblank1000: autoDraw = False
+37.8140 	EXP 	textblank1000: autoDraw = False
+37.8140 	EXP 	emopic: image = 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\EBPgLdJe_400x400.png'
+37.8140 	EXP 	emopic: autoDraw = True
+37.9139 	EXP 	redstar: autoDraw = True
+38.8141 	EXP 	emopic: autoDraw = False
+38.9308 	EXP 	redstar: autoDraw = False
+38.9308 	EXP 	emopic: autoDraw = False
+38.9308 	EXP 	redstar: autoDraw = False
+38.9308 	EXP 	textreproductionstart: text = '時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題'
+38.9308 	EXP 	scale: markerPos = None
+38.9308 	EXP 	scale: markerPos = None
+38.9308 	EXP 	textreproductionstart: autoDraw = True
+38.9308 	EXP 	scale: autoDraw = True
+40.5491 	EXP 	textreproductionstart: autoDraw = False
+40.5491 	EXP 	scale: autoDraw = False
+40.5491 	EXP 	textrest: autoDraw = True
+40.5715 	DATA 	KeyPress:  
+41.5469 	EXP 	textready: autoDraw = True
+41.5634 	EXP 	textrest: autoDraw = False
+41.5980 	DATA 	KeyPress:  
+42.0975 	DATA 	KeyPress:  
+42.5467 	EXP 	textready: autoDraw = False
+42.5467 	EXP 	textrest: autoDraw = False
+42.5467 	EXP 	textready: autoDraw = False
+42.5467 	EXP 	textEndMessage: autoDraw = True
+43.3154 	DATA 	Keypress: escape
+44.1734 	EXP 	window1: mouseVisible = True

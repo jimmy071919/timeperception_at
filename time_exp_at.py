@@ -1,8 +1,8 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 02, 2023, at 16:21
+    on 五月 02, 2023, at 15:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\user\\Desktop\\time_exp_at\\time_exp_at_lastrun.py',
+    originPath='C:\\Users\\user\\Desktop\\time_exp_at\\time_exp_at.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -126,11 +126,24 @@ emopic = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
+from psychopy import visual
+import numpy as np
 redstar = visual.ImageStim(
     win=win,
     name='redstar', 
     image='redstar.png', mask=None, anchor='center',
-    ori=0.0, pos=[0,0], size=(0.2, 0.2),
+    ori=0.0, pos=(0,0), size=(0.2, 0.2),
+    direction = np.random.choice(['up', 'down', 'left', 'right'])
+    # 根據方向設置圖片位置
+    if direction == 'up':
+        redstar.pos = (0, 2)
+    elif direction == 'down':
+        redstar.pos = (0, -2)
+    elif direction == 'left':
+        redstar.pos = (-2, 0)
+    else:
+        redstar.pos = (2, 0)
+
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
@@ -400,7 +413,6 @@ for thisTrial in trials:
     # update component parameters for each repeat
     emopic.setSize((0.7, 0.7))
     emopic.setImage(emo_pic)
-    redstar.setPos((posx,posy))
     # keep track of which components have finished
     picComponents = [emopic, redstar]
     for thisComponent in picComponents:
@@ -619,7 +631,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "rest" ---
-    while continueRoutine and routineTimer.getTime() < 2.0:
+    while continueRoutine and routineTimer.getTime() < 60.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -639,7 +651,7 @@ for thisTrial in trials:
             textrest.setAutoDraw(True)
         if textrest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textrest.tStartRefresh + 1-frameTolerance:
+            if tThisFlipGlobal > textrest.tStartRefresh + 55-frameTolerance:
                 # keep track of stop time/frame for later
                 textrest.tStop = t  # not accounting for scr refresh
                 textrest.frameNStop = frameN  # exact frame index
@@ -648,7 +660,7 @@ for thisTrial in trials:
                 textrest.setAutoDraw(False)
         
         # *textready* updates
-        if textready.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if textready.status == NOT_STARTED and tThisFlip >= 55-frameTolerance:
             # keep track of start time/frame for later
             textready.frameNStart = frameN  # exact frame index
             textready.tStart = t  # local t and not account for scr refresh
@@ -659,7 +671,7 @@ for thisTrial in trials:
             textready.setAutoDraw(True)
         if textready.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textready.tStartRefresh + 1-frameTolerance:
+            if tThisFlipGlobal > textready.tStartRefresh + 5-frameTolerance:
                 # keep track of stop time/frame for later
                 textready.tStop = t  # not accounting for scr refresh
                 textready.frameNStop = frameN  # exact frame index
@@ -693,7 +705,7 @@ for thisTrial in trials:
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-2.000000)
+        routineTimer.addTime(-60.000000)
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'trials'
