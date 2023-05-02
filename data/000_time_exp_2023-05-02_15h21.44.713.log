@@ -1,0 +1,88 @@
+5.8187 	WARNING 	User requested fullscreen with size [1280  720], but screen is actually [1920, 1080]. Using actual size
+6.5357 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023E950FBB80>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023E955E7970>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.5360 	EXP 	window1: mouseVisible = True
+6.5362 	EXP 	window1: mouseVisible = False
+6.5362 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.5363 	EXP 	window1: recordFrameIntervals = False
+6.7028 	EXP 	window1: recordFrameIntervals = True
+6.8854 	EXP 	Screen (0) actual frame rate measured at 59.96Hz
+6.8855 	EXP 	window1: recordFrameIntervals = False
+9.1268 	EXP 	Created textWelcomeMessage = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textWelcomeMessage', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='歡迎來到本次的實驗\n\n請按"空白鍵"開始實驗', units='height', win=Window(...), wrapWidth=1)
+9.1314 	EXP 	Created textblank1000 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textblank1000', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.5869 	EXP 	Sound sound_1 set volume 1.000
+9.5912 	EXP 	Created emopic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='emopic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+9.6118 	EXP 	Created redstar = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='redstar.png', interpolate=True, mask=None, maskParams=None, name='redstar', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+9.6123 	EXP 	Created textreproductionstart = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textreproductionstart', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.6196 	EXP 	window1: mouseVisible = True
+9.7476 	EXP 	Created scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='scale', opacity=None, ori=0.0, pos=array([ 0. , -0.2]), readOnly=False, self=UNKNOWN, size=array([1.2 , 0.04]), startValue=None, style='rating', styleTweaks=['triangleMarker'], ticks=ndarray(...), units='height', win=Window(...))
+9.7607 	EXP 	Created textrest = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textrest', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='休息一分鐘\n\n時間結束會自動進入下一題', units='height', win=Window(...), wrapWidth=1)
+9.7649 	EXP 	Created textready = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textready', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='即將進入下一題', units='height', win=Window(...), wrapWidth=1)
+9.7725 	EXP 	Created textEndMessage = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='textEndMessage', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='本次實驗到此結束\n\n感謝您的參與', units='height', win=Window(...), wrapWidth=1)
+9.7843 	EXP 	scale: autoLog = True
+9.7843 	EXP 	scale: markerPos = None
+9.7843 	EXP 	scale: styleTweaks = []
+9.7843 	EXP 	scale: styleTweaks = []
+9.7843 	EXP 	scale: styleTweaks = ['triangleMarker']
+9.7843 	EXP 	scale: styleTweaks = ['triangleMarker']
+9.7843 	EXP 	scale: contrast = 1.0
+9.7843 	EXP 	scale: autoLog = True
+9.7843 	EXP 	textWelcomeMessage: autoDraw = True
+11.1115 	EXP 	Imported pic_condition_2.xlsx as conditions, 4 conditions, 4 params
+11.1119 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+11.1121 	EXP 	New trial (rep=0, index=0): {'emo_pic': 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\EBPgLdJe_400x400.png', 'duration': 1, 'star': 'time_exp_at\\redstar.png', 'starduration': 0.1384903}
+11.1211 	EXP 	Sound sound_1 started
+11.1188 	EXP 	textWelcomeMessage: autoDraw = False
+11.1188 	EXP 	textblank1000: autoDraw = True
+11.1413 	DATA 	KeyPress:  
+11.6659 	EXP 	Sound sound_1 reached end of file
+12.1503 	EXP 	textblank1000: autoDraw = False
+12.1503 	EXP 	emopic: image = 'C:\\Users\\user\\Desktop\\time_exp\\emo_pic\\EBPgLdJe_400x400.png'
+12.1503 	EXP 	emopic: autoDraw = True
+12.2512 	EXP 	redstar: autoDraw = True
+13.1506 	EXP 	emopic: autoDraw = False
+13.3002 	EXP 	redstar: autoDraw = False
+13.3002 	EXP 	emopic: autoDraw = False
+13.3002 	EXP 	redstar: autoDraw = False
+13.3002 	EXP 	textreproductionstart: height = 0.05
+13.3002 	EXP 	textreproductionstart: height = 0.05
+13.3002 	EXP 	textreproductionstart: height = 0.05
+13.3002 	EXP 	textreproductionstart: text = '時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題'
+13.3002 	EXP 	scale: markerPos = None
+13.3002 	EXP 	scale: markerPos = None
+13.3002 	EXP 	textreproductionstart: autoDraw = True
+13.3002 	EXP 	scale: autoDraw = True
+17.2355 	DATA 	Mouse: Left button down, pos=(1068,309)
+17.2666 	EXP 	scale: markerPos = 8.75
+17.2999 	EXP 	scale: markerPos = 8.75
+17.3336 	EXP 	scale: markerPos = 8.75
+17.3673 	EXP 	scale: markerPos = 8.75
+17.4000 	EXP 	scale: markerPos = 8.75
+17.4332 	EXP 	scale: markerPos = 8.75
+17.4667 	EXP 	scale: markerPos = 8.75
+17.4999 	EXP 	scale: markerPos = 8.75
+17.5330 	EXP 	scale: markerPos = 8.75
+17.5666 	EXP 	scale: markerPos = 8.75
+17.6000 	EXP 	scale: markerPos = 8.75
+17.6339 	EXP 	scale: markerPos = 8.75
+17.6664 	EXP 	scale: markerPos = 8.784722222222221
+17.7004 	EXP 	scale: markerPos = 8.831018518518519
+17.7332 	EXP 	scale: markerPos = 8.88888888888889
+17.7663 	EXP 	scale: markerPos = 8.935185185185185
+17.7996 	EXP 	scale: markerPos = 8.958333333333334
+17.8330 	EXP 	scale: markerPos = 8.993055555555555
+17.8667 	EXP 	scale: markerPos = 9.016203703703704
+17.9003 	EXP 	scale: markerPos = 9.016203703703704
+17.9331 	EXP 	scale: markerPos = 9.016203703703704
+17.9664 	EXP 	scale: markerPos = 9.016203703703704
+17.9998 	EXP 	scale: markerPos = 9.016203703703704
+18.0333 	EXP 	scale: markerPos = 9.016203703703704
+18.0523 	DATA 	Mouse:  Left button up, pos=(1091,331)
+18.0663 	EXP 	scale: markerPos = 9.016203703703704
+18.1005 	EXP 	scale: markerPos = 9.016203703703704
+18.9841 	DATA 	Keypress: return
+20.8314 	DATA 	KeyPress:  
+20.8493 	EXP 	textreproductionstart: autoDraw = False
+20.8493 	EXP 	scale: autoDraw = False
+20.8493 	EXP 	textrest: autoDraw = True
+32.1991 	DATA 	Keypress: escape
+32.8406 	EXP 	window1: mouseVisible = True
