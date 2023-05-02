@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 02, 2023, at 16:21
+    on 五月 02, 2023, at 16:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -619,7 +619,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "rest" ---
-    while continueRoutine and routineTimer.getTime() < 2.0:
+    while continueRoutine and routineTimer.getTime() < 60.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -628,7 +628,7 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *textrest* updates
-        if textrest.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if textrest.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             textrest.frameNStart = frameN  # exact frame index
             textrest.tStart = t  # local t and not account for scr refresh
@@ -639,7 +639,7 @@ for thisTrial in trials:
             textrest.setAutoDraw(True)
         if textrest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textrest.tStartRefresh + 1-frameTolerance:
+            if tThisFlipGlobal > textrest.tStartRefresh + 55-frameTolerance:
                 # keep track of stop time/frame for later
                 textrest.tStop = t  # not accounting for scr refresh
                 textrest.frameNStop = frameN  # exact frame index
@@ -648,7 +648,7 @@ for thisTrial in trials:
                 textrest.setAutoDraw(False)
         
         # *textready* updates
-        if textready.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if textready.status == NOT_STARTED and tThisFlip >= 55-frameTolerance:
             # keep track of start time/frame for later
             textready.frameNStart = frameN  # exact frame index
             textready.tStart = t  # local t and not account for scr refresh
@@ -659,7 +659,7 @@ for thisTrial in trials:
             textready.setAutoDraw(True)
         if textready.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textready.tStartRefresh + 1-frameTolerance:
+            if tThisFlipGlobal > textready.tStartRefresh + 5-frameTolerance:
                 # keep track of stop time/frame for later
                 textready.tStop = t  # not accounting for scr refresh
                 textready.frameNStop = frameN  # exact frame index
@@ -693,7 +693,7 @@ for thisTrial in trials:
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-2.000000)
+        routineTimer.addTime(-60.000000)
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'trials'
