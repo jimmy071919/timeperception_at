@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 02, 2023, at 16:29
+    on 五月 26, 2023, at 08:30
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\user\\Desktop\\time_exp_at\\time_exp_at_lastrun.py',
+    originPath='D:\\程式\\psychopy\\time_attention\\timeperception_at\\time_exp_at_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -154,7 +154,7 @@ key_next = keyboard.Keyboard()
 
 # --- Initialize components for Routine "rest" ---
 textrest = visual.TextStim(win=win, name='textrest',
-    text='休息一分鐘\n\n時間結束會自動進入下一題',
+    text='休息20秒\n\n時間結束會自動進入下一題',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -167,6 +167,9 @@ textready = visual.TextStim(win=win, name='textready',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+sound_2 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
+    name='sound_2')
+sound_2.setVolume(1.0)
 
 # --- Initialize components for Routine "End" ---
 textEndMessage = visual.TextStim(win=win, name='textEndMessage',
@@ -604,8 +607,10 @@ for thisTrial in trials:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    sound_2.setSound('sound/trueding.wav', secs=1.0, hamming=True)
+    sound_2.setVolume(1.0, log=False)
     # keep track of which components have finished
-    restComponents = [textrest, textready]
+    restComponents = [textrest, textready, sound_2]
     for thisComponent in restComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -619,7 +624,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "rest" ---
-    while continueRoutine and routineTimer.getTime() < 60.0:
+    while continueRoutine and routineTimer.getTime() < 20.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -639,7 +644,7 @@ for thisTrial in trials:
             textrest.setAutoDraw(True)
         if textrest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textrest.tStartRefresh + 55-frameTolerance:
+            if tThisFlipGlobal > textrest.tStartRefresh + 15-frameTolerance:
                 # keep track of stop time/frame for later
                 textrest.tStop = t  # not accounting for scr refresh
                 textrest.frameNStop = frameN  # exact frame index
@@ -648,7 +653,7 @@ for thisTrial in trials:
                 textrest.setAutoDraw(False)
         
         # *textready* updates
-        if textready.status == NOT_STARTED and tThisFlip >= 55-frameTolerance:
+        if textready.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
             # keep track of start time/frame for later
             textready.frameNStart = frameN  # exact frame index
             textready.tStart = t  # local t and not account for scr refresh
@@ -666,6 +671,24 @@ for thisTrial in trials:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'textready.stopped')
                 textready.setAutoDraw(False)
+        # start/stop sound_2
+        if sound_2.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
+            # keep track of start time/frame for later
+            sound_2.frameNStart = frameN  # exact frame index
+            sound_2.tStart = t  # local t and not account for scr refresh
+            sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+            # add timestamp to datafile
+            thisExp.addData('sound_2.started', tThisFlipGlobal)
+            sound_2.play(when=win)  # sync with win flip
+        if sound_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > sound_2.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                sound_2.tStop = t  # not accounting for scr refresh
+                sound_2.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'sound_2.stopped')
+                sound_2.stop()
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -689,11 +712,12 @@ for thisTrial in trials:
     for thisComponent in restComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    sound_2.stop()  # ensure sound has stopped at end of routine
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-60.000000)
+        routineTimer.addTime(-20.000000)
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'trials'
