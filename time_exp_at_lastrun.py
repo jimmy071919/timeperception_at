@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 30, 2023, at 23:11
+    on 五月 30, 2023, at 23:17
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\User\\Documents\\program\\timeperception_at\\time_exp_at_lastrun.py',
+    originPath='C:\\Users\\user\\Documents\\GitHub\\timeperception_at\\time_exp_at_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -96,16 +96,6 @@ eyetracker = None
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard(backend='iohub')
 
-# --- Initialize components for Routine "Welcome" ---
-textWelcomeMessage = visual.TextStim(win=win, name='textWelcomeMessage',
-    text='歡迎來到本次的實驗\n\n請按"空白鍵"開始實驗',
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-keyWelcome = keyboard.Keyboard()
-
 # --- Initialize components for Routine "estimation" ---
 textreproductionstart = visual.TextStim(win=win, name='textreproductionstart',
     text='',
@@ -122,6 +112,16 @@ scale = visual.Slider(win=win, name='scale',
     font='Open Sans', labelHeight=0.04,
     flip=False, ori=0.0, depth=-1, readOnly=False)
 key_next = keyboard.Keyboard()
+
+# --- Initialize components for Routine "Welcome" ---
+textWelcomeMessage = visual.TextStim(win=win, name='textWelcomeMessage',
+    text='歡迎來到本次的實驗\n\n請按"空白鍵"開始實驗',
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+keyWelcome = keyboard.Keyboard()
 
 # --- Initialize components for Routine "blank_1000" ---
 textblank1000 = visual.TextStim(win=win, name='textblank1000',
@@ -271,103 +271,6 @@ keyEnd = keyboard.Keyboard()
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.Clock()  # to track time remaining of each (possibly non-slip) routine 
 
-# --- Prepare to start Routine "Welcome" ---
-continueRoutine = True
-routineForceEnded = False
-# update component parameters for each repeat
-keyWelcome.keys = []
-keyWelcome.rt = []
-_keyWelcome_allKeys = []
-# keep track of which components have finished
-WelcomeComponents = [textWelcomeMessage, keyWelcome]
-for thisComponent in WelcomeComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-frameN = -1
-
-# --- Run Routine "Welcome" ---
-while continueRoutine:
-    # get current time
-    t = routineTimer.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *textWelcomeMessage* updates
-    if textWelcomeMessage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        textWelcomeMessage.frameNStart = frameN  # exact frame index
-        textWelcomeMessage.tStart = t  # local t and not account for scr refresh
-        textWelcomeMessage.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(textWelcomeMessage, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'textWelcomeMessage.started')
-        textWelcomeMessage.setAutoDraw(True)
-    
-    # *keyWelcome* updates
-    waitOnFlip = False
-    if keyWelcome.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        keyWelcome.frameNStart = frameN  # exact frame index
-        keyWelcome.tStart = t  # local t and not account for scr refresh
-        keyWelcome.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(keyWelcome, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'keyWelcome.started')
-        keyWelcome.status = STARTED
-        # keyboard checking is just starting
-        waitOnFlip = True
-        win.callOnFlip(keyWelcome.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(keyWelcome.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if keyWelcome.status == STARTED and not waitOnFlip:
-        theseKeys = keyWelcome.getKeys(keyList=['space'], waitRelease=False)
-        _keyWelcome_allKeys.extend(theseKeys)
-        if len(_keyWelcome_allKeys):
-            keyWelcome.keys = _keyWelcome_allKeys[-1].name  # just the last key pressed
-            keyWelcome.rt = _keyWelcome_allKeys[-1].rt
-            # a response ends the routine
-            continueRoutine = False
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        routineForceEnded = True
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in WelcomeComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# --- Ending Routine "Welcome" ---
-for thisComponent in WelcomeComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-# check responses
-if keyWelcome.keys in ['', [], None]:  # No response was made
-    keyWelcome.keys = None
-thisExp.addData('keyWelcome.keys',keyWelcome.keys)
-if keyWelcome.keys != None:  # we had a response
-    thisExp.addData('keyWelcome.rt', keyWelcome.rt)
-thisExp.nextEntry()
-# the Routine "Welcome" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
 # --- Prepare to start Routine "estimation" ---
 continueRoutine = True
 routineForceEnded = False
@@ -478,6 +381,103 @@ if key_next.keys != None:  # we had a response
     thisExp.addData('key_next.rt', key_next.rt)
 thisExp.nextEntry()
 # the Routine "estimation" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# --- Prepare to start Routine "Welcome" ---
+continueRoutine = True
+routineForceEnded = False
+# update component parameters for each repeat
+keyWelcome.keys = []
+keyWelcome.rt = []
+_keyWelcome_allKeys = []
+# keep track of which components have finished
+WelcomeComponents = [textWelcomeMessage, keyWelcome]
+for thisComponent in WelcomeComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+frameN = -1
+
+# --- Run Routine "Welcome" ---
+while continueRoutine:
+    # get current time
+    t = routineTimer.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *textWelcomeMessage* updates
+    if textWelcomeMessage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        textWelcomeMessage.frameNStart = frameN  # exact frame index
+        textWelcomeMessage.tStart = t  # local t and not account for scr refresh
+        textWelcomeMessage.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textWelcomeMessage, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'textWelcomeMessage.started')
+        textWelcomeMessage.setAutoDraw(True)
+    
+    # *keyWelcome* updates
+    waitOnFlip = False
+    if keyWelcome.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        keyWelcome.frameNStart = frameN  # exact frame index
+        keyWelcome.tStart = t  # local t and not account for scr refresh
+        keyWelcome.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(keyWelcome, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'keyWelcome.started')
+        keyWelcome.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(keyWelcome.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(keyWelcome.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if keyWelcome.status == STARTED and not waitOnFlip:
+        theseKeys = keyWelcome.getKeys(keyList=['space'], waitRelease=False)
+        _keyWelcome_allKeys.extend(theseKeys)
+        if len(_keyWelcome_allKeys):
+            keyWelcome.keys = _keyWelcome_allKeys[-1].name  # just the last key pressed
+            keyWelcome.rt = _keyWelcome_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in WelcomeComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# --- Ending Routine "Welcome" ---
+for thisComponent in WelcomeComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if keyWelcome.keys in ['', [], None]:  # No response was made
+    keyWelcome.keys = None
+thisExp.addData('keyWelcome.keys',keyWelcome.keys)
+if keyWelcome.keys != None:  # we had a response
+    thisExp.addData('keyWelcome.rt', keyWelcome.rt)
+thisExp.nextEntry()
+# the Routine "Welcome" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc

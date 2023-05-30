@@ -529,8 +529,8 @@
     </Routine>
   </Routines>
   <Flow>
-    <Routine name="Welcome"/>
     <Routine name="estimation"/>
+    <Routine name="Welcome"/>
     <LoopInitiator loopType="TrialHandler" name="pra_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'pink': 'pink.png', 'pra_duration': 4}, {'pink': 'pink.png', 'pra_duration': 2}, {'pink': 'pink.png', 'pra_duration': 6}]" valType="str"/>
