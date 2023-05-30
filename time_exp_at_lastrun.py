@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 30, 2023, at 14:09
+    on 五月 30, 2023, at 23:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -105,6 +105,23 @@ textWelcomeMessage = visual.TextStim(win=win, name='textWelcomeMessage',
     languageStyle='LTR',
     depth=0.0);
 keyWelcome = keyboard.Keyboard()
+
+# --- Initialize components for Routine "estimation" ---
+textreproductionstart = visual.TextStim(win=win, name='textreproductionstart',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+scale = visual.Slider(win=win, name='scale',
+    startValue=None, size=(1.2, 0.04), pos=(0, -0.2), units=None,
+    labels=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15), granularity=0.0,
+    style='rating', styleTweaks=('triangleMarker',), opacity=None,
+    labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
+    font='Open Sans', labelHeight=0.04,
+    flip=False, ori=0.0, depth=-1, readOnly=False)
+key_next = keyboard.Keyboard()
 
 # --- Initialize components for Routine "blank_1000" ---
 textblank1000 = visual.TextStim(win=win, name='textblank1000',
@@ -349,6 +366,118 @@ if keyWelcome.keys != None:  # we had a response
     thisExp.addData('keyWelcome.rt', keyWelcome.rt)
 thisExp.nextEntry()
 # the Routine "Welcome" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# --- Prepare to start Routine "estimation" ---
+continueRoutine = True
+routineForceEnded = False
+# update component parameters for each repeat
+textreproductionstart.setText('時間估計作業\n\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題')
+scale.reset()
+key_next.keys = []
+key_next.rt = []
+_key_next_allKeys = []
+# keep track of which components have finished
+estimationComponents = [textreproductionstart, scale, key_next]
+for thisComponent in estimationComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+frameN = -1
+
+# --- Run Routine "estimation" ---
+while continueRoutine:
+    # get current time
+    t = routineTimer.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *textreproductionstart* updates
+    if textreproductionstart.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        textreproductionstart.frameNStart = frameN  # exact frame index
+        textreproductionstart.tStart = t  # local t and not account for scr refresh
+        textreproductionstart.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(textreproductionstart, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'textreproductionstart.started')
+        textreproductionstart.setAutoDraw(True)
+    
+    # *scale* updates
+    if scale.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        scale.frameNStart = frameN  # exact frame index
+        scale.tStart = t  # local t and not account for scr refresh
+        scale.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(scale, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'scale.started')
+        scale.setAutoDraw(True)
+    
+    # *key_next* updates
+    waitOnFlip = False
+    if key_next.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_next.frameNStart = frameN  # exact frame index
+        key_next.tStart = t  # local t and not account for scr refresh
+        key_next.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_next, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'key_next.started')
+        key_next.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_next.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(key_next.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_next.status == STARTED and not waitOnFlip:
+        theseKeys = key_next.getKeys(keyList=['space'], waitRelease=False)
+        _key_next_allKeys.extend(theseKeys)
+        if len(_key_next_allKeys):
+            key_next.keys = _key_next_allKeys[-1].name  # just the last key pressed
+            key_next.rt = _key_next_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in estimationComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# --- Ending Routine "estimation" ---
+for thisComponent in estimationComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('scale.response', scale.getRating())
+thisExp.addData('scale.rt', scale.getRT())
+# check responses
+if key_next.keys in ['', [], None]:  # No response was made
+    key_next.keys = None
+thisExp.addData('key_next.keys',key_next.keys)
+if key_next.keys != None:  # we had a response
+    thisExp.addData('key_next.rt', key_next.rt)
+thisExp.nextEntry()
+# the Routine "estimation" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
