@@ -2,7 +2,7 @@
 <PsychoPy2experiment encoding="utf-8" version="2022.2.5">
   <Settings>
     <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
-    <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
+    <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
     <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
@@ -26,7 +26,7 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1280, 720]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1536, 864]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
@@ -219,7 +219,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.7, 0.7)" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(0.95, 0.7)" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -325,7 +325,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="時間估計作業&amp;#10;請透過滑鼠將刺激呈現時間點在以下量尺中&amp;#10;按下空白鍵進入下一題" valType="str" updates="set every repeat" name="text"/>
+        <Param val="時間估計作業&amp;#10;&amp;#10;請透過滑鼠將刺激呈現時間點在以下量尺中&amp;#10;按下空白鍵進入下一題" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -405,9 +405,9 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="25" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="休息20秒&amp;#10;&amp;#10;時間結束會自動進入下一題" valType="str" updates="constant" name="text"/>
+        <Param val="休息30秒&amp;#10;&amp;#10;時間結束會自動進入下一題" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -428,7 +428,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="15" valType="code" updates="None" name="startVal"/>
+        <Param val="25" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -445,7 +445,7 @@
         <Param val="sound/trueding.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="15" valType="code" updates="None" name="startVal"/>
+        <Param val="25" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>

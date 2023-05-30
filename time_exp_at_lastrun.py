@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 29, 2023, at 19:43
+    on 五月 30, 2023, at 14:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -14,6 +14,7 @@ If you publish work using this script the most relevant publication is:
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
+prefs.hardware['audioLib'] = 'ptb'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
@@ -54,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\程式\\psychopy\\time_attention\\timeperception_at\\time_exp_at_lastrun.py',
+    originPath='C:\\Users\\User\\Documents\\program\\timeperception_at\\time_exp_at_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -68,7 +69,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1280, 720], fullscr=True, screen=0, 
+    size=[1536, 864], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
@@ -146,7 +147,7 @@ key_next = keyboard.Keyboard()
 
 # --- Initialize components for Routine "rest" ---
 textrest = visual.TextStim(win=win, name='textrest',
-    text='休息20秒\n\n時間結束會自動進入下一題',
+    text='休息30秒\n\n時間結束會自動進入下一題',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -222,7 +223,7 @@ key_next = keyboard.Keyboard()
 
 # --- Initialize components for Routine "rest" ---
 textrest = visual.TextStim(win=win, name='textrest',
-    text='休息20秒\n\n時間結束會自動進入下一題',
+    text='休息30秒\n\n時間結束會自動進入下一題',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -542,7 +543,7 @@ for thisPra_trial in pra_trials:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
-    textreproductionstart.setText('時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題')
+    textreproductionstart.setText('時間估計作業\n\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題')
     scale.reset()
     key_next.keys = []
     key_next.rt = []
@@ -670,7 +671,7 @@ for thisPra_trial in pra_trials:
     frameN = -1
     
     # --- Run Routine "rest" ---
-    while continueRoutine and routineTimer.getTime() < 20.0:
+    while continueRoutine and routineTimer.getTime() < 30.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -690,7 +691,7 @@ for thisPra_trial in pra_trials:
             textrest.setAutoDraw(True)
         if textrest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textrest.tStartRefresh + 15-frameTolerance:
+            if tThisFlipGlobal > textrest.tStartRefresh + 25-frameTolerance:
                 # keep track of stop time/frame for later
                 textrest.tStop = t  # not accounting for scr refresh
                 textrest.frameNStop = frameN  # exact frame index
@@ -699,7 +700,7 @@ for thisPra_trial in pra_trials:
                 textrest.setAutoDraw(False)
         
         # *textready* updates
-        if textready.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
+        if textready.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
             # keep track of start time/frame for later
             textready.frameNStart = frameN  # exact frame index
             textready.tStart = t  # local t and not account for scr refresh
@@ -718,7 +719,7 @@ for thisPra_trial in pra_trials:
                 thisExp.timestampOnFlip(win, 'textready.stopped')
                 textready.setAutoDraw(False)
         # start/stop sound_2
-        if sound_2.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
+        if sound_2.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
             # keep track of start time/frame for later
             sound_2.frameNStart = frameN  # exact frame index
             sound_2.tStart = t  # local t and not account for scr refresh
@@ -763,7 +764,7 @@ for thisPra_trial in pra_trials:
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-20.000000)
+        routineTimer.addTime(-30.000000)
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'pra_trials'
@@ -985,7 +986,7 @@ for thisTrial in trials:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
-    emopic.setSize((0.7, 0.7))
+    emopic.setSize((0.95, 0.7))
     emopic.setImage(emo_pic)
     redstar.setPos((posx,posy))
     # keep track of which components have finished
@@ -1080,7 +1081,7 @@ for thisTrial in trials:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
-    textreproductionstart.setText('時間估計作業\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題')
+    textreproductionstart.setText('時間估計作業\n\n請透過滑鼠將刺激呈現時間點在以下量尺中\n按下空白鍵進入下一題')
     scale.reset()
     key_next.keys = []
     key_next.rt = []
@@ -1208,7 +1209,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "rest" ---
-    while continueRoutine and routineTimer.getTime() < 20.0:
+    while continueRoutine and routineTimer.getTime() < 30.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1228,7 +1229,7 @@ for thisTrial in trials:
             textrest.setAutoDraw(True)
         if textrest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textrest.tStartRefresh + 15-frameTolerance:
+            if tThisFlipGlobal > textrest.tStartRefresh + 25-frameTolerance:
                 # keep track of stop time/frame for later
                 textrest.tStop = t  # not accounting for scr refresh
                 textrest.frameNStop = frameN  # exact frame index
@@ -1237,7 +1238,7 @@ for thisTrial in trials:
                 textrest.setAutoDraw(False)
         
         # *textready* updates
-        if textready.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
+        if textready.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
             # keep track of start time/frame for later
             textready.frameNStart = frameN  # exact frame index
             textready.tStart = t  # local t and not account for scr refresh
@@ -1256,7 +1257,7 @@ for thisTrial in trials:
                 thisExp.timestampOnFlip(win, 'textready.stopped')
                 textready.setAutoDraw(False)
         # start/stop sound_2
-        if sound_2.status == NOT_STARTED and tThisFlip >= 15-frameTolerance:
+        if sound_2.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
             # keep track of start time/frame for later
             sound_2.frameNStart = frameN  # exact frame index
             sound_2.tStart = t  # local t and not account for scr refresh
@@ -1301,7 +1302,7 @@ for thisTrial in trials:
     if routineForceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-20.000000)
+        routineTimer.addTime(-30.000000)
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'trials'
